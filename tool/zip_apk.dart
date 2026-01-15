@@ -29,11 +29,6 @@ void main() {
   final zipEncoder = ZipEncoder();
   final zipBytes = zipEncoder.encode(archive);
 
-  if (zipBytes == null) {
-      print('Error: Failed to encode the zip file.');
-      return;
-  }
-
   // Write the zip file to disk
   final zipFile = File(zipPath);
   zipFile.writeAsBytesSync(zipBytes);
